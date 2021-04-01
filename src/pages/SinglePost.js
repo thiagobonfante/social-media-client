@@ -72,13 +72,14 @@ function SinglePost(props) {
       likes,
       likeCount,
       commentCount,
+      userAvatar
     } = post;
 
     postMarkup = (
       <Grid>
         <Grid.Row>
           <Grid.Column width={2}>
-            <UserAvatar float="right" size="small" username={username} />
+            <UserAvatar float="right" size="small" username={username} avatar={userAvatar} />
           </Grid.Column>
           <Grid.Column width={10}>
             <Card fluid>
@@ -167,6 +168,7 @@ const FETCH_POST_QUERY = gql`
       body
       createdAt
       username
+      userAvatar,
       likeCount
       likes {
         username

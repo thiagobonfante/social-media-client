@@ -13,6 +13,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import SinglePost from "./pages/SinglePost";
+import Profile from "./pages/Profile";
+import Ranking from "./pages/Ranking";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <AuthRoute exact path="/login" component={Login} />
           <AuthRoute exact path="/register" component={Register} />
           <Route exact path="/posts/:postId" component={SinglePost} />
+          <Route exact path="/profile/:username" component={Profile} />
+          <Route exact path="/ranking" component={Ranking} />
         </Container>
       </Router>
     </AuthProvider>

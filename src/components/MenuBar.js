@@ -17,9 +17,17 @@ function MenuBar() {
     <Menu pointing secondary size="massive" color="teal">
       <Menu.Item
         name={user.username}
-        active
+        active={activeItem === user.username}
+        onClick={handleItemClick}
         as={Link}
         to="/"
+      />
+      <Menu.Item
+        name="ranking"
+        active={activeItem === "ranking"}
+        onClick={handleItemClick}
+        as={Link}
+        to="/ranking"
       />
       <Menu.Menu position="right">
         <Menu.Item
@@ -37,6 +45,13 @@ function MenuBar() {
         onClick={handleItemClick}
         as={Link}
         to="/"
+      />
+      <Menu.Item
+        name="ranking"
+        active={activeItem === "ranking"}
+        onClick={handleItemClick}
+        as={Link}
+        to="/ranking"
       />
       <Menu.Menu position="right">
         <Menu.Item
